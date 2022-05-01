@@ -50,6 +50,23 @@ call List.SortByDescending '降順ソート
 set newList = List.DistinctToList 'もとのリストは保持される。
 ```
 
+文字列結合
+```VBA
+str = List.ToBuildString '格納されている値をすべて結合します
+str = List.ToBuildString(",") '格納されている値をすべて結合します。要素の区切りとして","が追加されます)
+csv = List.ToBuildSCSV(5,vbTab,vbCr) '5行改行,区切り文字タブ,改行文字列CrのCSV形式の文字列に結合します。
+```
+
+配列化(MethodTest内のウォッチウィンドウ等で見てくれたほうが良いです)
+```VBA
+str = List.ToArray ' Array(n) 形式になります
+str = List.ToTransposeArray ' Array(0,n) 形式になります1列に貼付する際に便利
+str = List.To2DArray(i) ' Array( n/i ,0 to i ) 形式になります。列数が指定できる感じ。
+str = List.To2DTransposeArrayTest(i) 'Array( 0 to i ,n/i) 形式になります。行数が指定できる感じ。
+str = List.ToChunkArray(i) ' Array((n/i)(0 to i))形式になります For eachで配列を分けたい場合に
+str = List.ToTransposeChunkArrayTest' Array((n/i)(0,0 to i))形式になります For each+貼付で困った際に
+```
+
  
 # Requirement
  
