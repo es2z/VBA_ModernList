@@ -589,7 +589,7 @@ End Function
 'Extracts the specified number of values from the beginning.
 Public Function TakeToList(itemCount As Long) As List
 
-    'w’è”‚ª—v‘f”‚ğ’´‚¦‚Ä‚¢‚éê‡ƒNƒ[ƒ“‚ğ•Ô‚·
+    'If the specified number exceeds the number of elements, an empty list is returned.
     Dim minIndex As Long: minIndex = LBound(myArr)
     If itemCount + 1 - minIndex > myCount Then
         Set TakeToList = Me.Clone()
@@ -761,7 +761,7 @@ Public Function ToBuildString(Optional delimiter As String = "") As String
     Dim i&
     Dim elmLength&
 
-    If delimiter = "" Then 'ˆø”‚ª‚È‚¢ê‡
+    If delimiter = "" Then 'å¼•æ•°ãŒãªã„å ´åˆ
    
         For Each elm In myArr
             strCount = strCount + Len(elm)
@@ -788,7 +788,7 @@ Public Function ToBuildString(Optional delimiter As String = "") As String
    
         ToBuildString = result
        
-    Else 'ˆø”‚ª‚ ‚éê‡
+    Else 'å¼•æ•°ãŒã‚ã‚‹å ´åˆ
    
         For Each elm In myArr
             strCount = strCount + Len(elm)
@@ -944,7 +944,7 @@ Public Function Math_Sum()
         Math_Sum = WorksheetFunction.Sum(myArr)
     Else
         Dim buf
-        For Each elm In myArr 'empty‚Ì‰ÁZ‚ÍƒGƒ‰[‚É‚È‚ç‚È‚¢‚µ‚Í‚â‚¢
+        For Each elm In myArr 'emptyã®åŠ ç®—ã¯ã‚¨ãƒ©ãƒ¼ã«ãªã‚‰ãªã„ã—ã¯ã‚„ã„
             buf = buf + elm
         Next
         Math_Sum = buf
@@ -996,7 +996,7 @@ Public Function Math_Max()
 
     If myCount < 65535 Then
         Math_Max = WorksheetFunction.max(myArr)
-    ElseIf myCount < 1048575 Then 'ˆÓŠO‚ÆhR‚µ‚Ä‚¢‚é‚Ì‚ÅŠO‚µ‚Ä‚à—Ç‚¢
+    ElseIf myCount < 1048575 Then 'æ„å¤–ã¨æ‹®æŠ—ã—ã¦ã„ã‚‹ã®ã§å¤–ã—ã¦ã‚‚è‰¯ã„
         Math_Max = WorksheetFunction.max(Me.ToTransposeArray)
     Else
 
