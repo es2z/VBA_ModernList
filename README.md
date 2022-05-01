@@ -21,7 +21,8 @@ VBA_ModernListは内部実装において配列が使われており、純粋な
 以下のようにインスタンスを作成することで、使用可能になります。
 ```VBA
 Dim list as List:Set list = new List
-```
+```  
+※以下の内容はMethodTest.clsを追加して、内容を見たほうがわかりやすいかもしれません。
 
 値の追加
 ```VBA
@@ -57,7 +58,7 @@ set newList = List.DistinctToList 'もとのリストは保持される。
 call List.DebugPrint("先頭の内容","Formatの形式 #,##0など ","後方の内容")
 ```  
 
-メソッドチェーン(殆どのメソッドは自身(List型)を返すので、そのまま.で次のメソッドを発行することが可能です)
+メソッドチェーン(殆どのメソッドは自身(List型)を返すので、そのまま.で次のメソッドを発行することが可能)
 ```VBA
 Call List.CreateSeqNumbers(0, 5) _
         .DebugPrint("Before MAP=> ") _
