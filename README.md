@@ -13,15 +13,9 @@
 ･WokrSheetFunctionの範囲を超える計算をすることが可能です(Sum,Average,Median,Max,Min,StDevP,Mode)  
 
  
-# DEMO
- 
-You can learn how to making cute physics simulations (looks retro game).
- 
-![](https://raw.githubusercontent.com/es2z/VBA_ModernList/main/Img/BenchMark.png?token=GHSAT0AAAAAABUDPON5NOGBAPODAPZANNGMYTOJ2AA)
- 
-This animation is a "Cat playing on trampoline"!
-You can get basic skills for making physics simulations.
- 
+# ベンチマーク
+VBA_ModernListは内部実装において配列が使われており、純粋な配列に近い速度を維持することが可能です。
+ ![](https://raw.githubusercontent.com/es2z/VBA_ModernList/main/Img/BenchMark.png?token=GHSAT0AAAAAABUDPON5NOGBAPODAPZANNGMYTOJ2AA) 
 # Features
  
 Physics_Sim_Py used [pyxel](https://github.com/kitao/pyxel) only.
