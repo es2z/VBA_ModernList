@@ -8,6 +8,8 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 
+'It is almost identical to a list object, except that it can contain objects.
+'This class is less well tested for bugs than the List class.
 'If used, it must be used with the List class.
 'There are several methods to convert to a List.
 
@@ -16,9 +18,6 @@ Attribute VB_Exposed = False
 
 'Comments are machine translated by DeepL translation.
 'It may be more accurate to read the code for the actual behavior.
-
-'It is almost identical to a list object, except that it can contain objects.
-'This class is less well tested for bugs than the List class.
 
 Option Base 0
 Private myArr() As Variant
