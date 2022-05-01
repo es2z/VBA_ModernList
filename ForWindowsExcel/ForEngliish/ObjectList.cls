@@ -18,6 +18,7 @@ Attribute VB_Exposed = False
 'It may be more accurate to read the code for the actual behavior.
 
 'It is almost identical to a list object, except that it can contain objects.
+'This class is less well tested for bugs than the List class.
 
 Option Base 0
 Private myArr() As Variant
