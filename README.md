@@ -15,7 +15,7 @@
  
 # ベンチマーク
 VBA_ModernListは内部実装において配列が使われており、純粋な配列に近い速度で動作します。
- ![](https://raw.githubusercontent.com/es2z/VBA_ModernList/main/Img/BenchMark.png) 
+ ![](https://github.com/es2z/VBA_ModernList/blob/main/Img/BenchMark.png?raw=true) 
 # 基本操作
  
 以下のようにインスタンスを作成することで、使用可能になります。
