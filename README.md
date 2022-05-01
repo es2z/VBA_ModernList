@@ -43,7 +43,19 @@ set newList = List.PopRange(5,10) '5番目から10番目の値をListとして�
 ```VBA
 call List.Sort '昇順ソート
 call List.SortByDescending '降順ソート
-```    
+```  
+
+
+ユニーク化(重複のない値にする)
+```VBA
+set newList = List.DistinctToList 'もとのリストは保持される。
+```  
+
+  
+デバッグ
+```VBA
+call List.DebugPrint("先頭の内容","Formatの形式 #,##0など ","後方の内容")
+```  
 
 メソッドチェーン(殆どのメソッドは自身(List型)を返すので、そのまま.で次のメソッドを発行することが可能です)
 ```VBA
@@ -56,12 +68,6 @@ Call List.CreateSeqNumbers(0, 5) _
         '内容をイミディエイトに表示
         'すべての内容にΠを掛ける
         '内容を表示
-```  
-
-
-ユニーク化(重複のない値にする)
-```VBA
-set newList = List.DistinctToList 'もとのリストは保持される。
 ```  
 
 文字列結合
