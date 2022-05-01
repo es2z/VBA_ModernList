@@ -9,8 +9,8 @@
 ･メソッドチェーンをつなげて、値の追加から加工出力まで1行で書けます(.NetならLINQと言われている機能)  
 ･Excelシートと連携することを考え、極めて多様な配列化を内包しています(2次元配列化/天地逆転2次元配列化など)  
 ･メソッドチェーン内のどこでも .DebugPrintを付けて内容を確認することが可能です。  
-･StringBuilderを内包しており、高速な文字列結合が行えます。CSV化を1行でかけるメソッドもあります。
-･WokrSheetFunctionの範囲を超える計算をすることが可能です(Sum,Average,Median,Max,Min,StDevP,Mode_Single/Multi)  
+･StringBuilderを内包しており、高速な文字列結合が行えます。CSV化を1行でかけるメソッドもあります。  
+･WokrSheetFunctionの範囲を超える計算をすることが可能です(Sum,Average,Median,Max,Min,StDevP,Mode)  
 
  
 # DEMO
