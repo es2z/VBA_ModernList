@@ -8,6 +8,9 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 
+'If used, it must be used with the List class.
+'There are several methods to convert to a List.
+
 'The repository here is as follows.
 'https://github.com/es2z/VBA_ModernList
 
