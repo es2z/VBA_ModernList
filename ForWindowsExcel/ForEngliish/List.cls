@@ -7,6 +7,9 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
+
+'It is a one-way concatenated list that can be used with built-in types.
+
 'The repository here is as follows.
 'https://github.com/es2z/VBA_ModernList
 
