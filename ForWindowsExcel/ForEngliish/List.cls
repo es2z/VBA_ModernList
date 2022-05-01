@@ -95,7 +95,7 @@ err:
     Else
         Dim additionalElmCnt&: additionalElmCnt = 1
         For i = 1 To dimensionsCount
-            additionalElmCnt = additionalElmCnt * (UBound(args, dimensionsCount) - LBound(args, dimensionsCount) + 1)
+            additionalElmCnt = additionalElmCnt * (UBound(args, i) - LBound(args, i) + 1)
         Next i
         myCount = myCount + additionalElmCnt
     End If
