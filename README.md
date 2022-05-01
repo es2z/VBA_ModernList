@@ -58,7 +58,7 @@ set newList = List.DistinctToList 'もとのリストは保持される。
 call List.DebugPrint("先頭の内容","Formatの形式 #,##0など ","後方の内容")
 ```  
 
-メソッドチェーン(殆どのメソッドは自身(List型)を返すので、そのまま.で次のメソッドを発行することが可能)
+メソッドチェーン(殆どのメソッドは自身(List型)を返すので、そのまま次のメソッドを発行することが可能)
 ```VBA
 Call List.CreateSeqNumbers(0, 5) _
         .DebugPrint("Before MAP=> ") _
