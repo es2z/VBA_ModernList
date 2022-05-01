@@ -28,7 +28,7 @@ Dim list as List:Set list = new List
 ```VBA
 List.Add(1)
 call List.AddRange(Array(1,2,3,4,5))
-call List.AddRange(Range("A1:A100"))
+call List.AddRange(Range("A1:A100").Value)
 call List.Concat(List)) '別のリストの値を追加します
 ```  
 
