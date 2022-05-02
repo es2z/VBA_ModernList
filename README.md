@@ -2,7 +2,8 @@ The following is a machine translation. Therefore, the translation may not be ac
 日本語はこちらから→ [こちら](/README_Japanese.md)   
 
 # VBA_ModernList
-It provides extremely fast and highly functional one-way associative lists that work primarily with ExcelVBA.  
+This is an extremely fast and highly functional one-way concatenated list that runs in ExcelVBA (Windows).   
+*Versions that work in other environments will be added in the future. Probably.
 
 # Features  
 ･It can be used without adding reference settings.  
