@@ -1,5 +1,5 @@
 The following is a machine translation. Therefore, the translation may not be accurate.  
-日本語はこちらです→ ![こちら](/README_Japanese.md)   
+日本語はこちらから→ [こちら](/README_Japanese.md)   
 
 # VBA_ModernList
 It provides extremely fast and highly functional one-way associative lists that work primarily with ExcelVBA.  
@@ -16,7 +16,7 @@ It provides extremely fast and highly functional one-way associative lists that 
  
 # Bench Marks
 VBA_ModernList uses arrays in its internal implementation and operates at speeds similar to pure arrays.
- ![](https://github.com/es2z/VBA_ModernList/blob/main/Img/BenchMark.png?raw=true)   
+ ![](/Img/BenchMark.png?raw=true)   
  
 # Details
  
