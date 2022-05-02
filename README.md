@@ -3,6 +3,8 @@ The following is a machine translation. Therefore, the translation may not be ac
 # VBA_ModernList
 This is an extremely fast and highly functional one-way concatenated list that runs in ExcelVBA (Windows).   
 *Versions that work in other environments will be added in the future. Probably.
+VBA_ModernList uses arrays in its internal implementation and operates at speeds similar to pure arrays.
+ ![](/BenchMark.png?raw=true)   
 
 # Features  
 ･It can be used without adding reference settings.  
@@ -13,10 +15,6 @@ This is an extremely fast and highly functional one-way concatenated list that r
 ･Extremely diverse arrayization is included for use with Excel sheets (two-dimensional arrayization, inverted two-dimensional arrayization, etc.).  
 ･It includes a StringBuilder for fast string merging and a method to convert to CSV in a single line.  
 ･It is possible to calculate beyond the range of WokrSheetFunction (Sum,Average,Median,Max,Min,StDevP,Mode).  
- 
-# Bench Marks
-VBA_ModernList uses arrays in its internal implementation and operates at speeds similar to pure arrays.
- ![](/BenchMark.png?raw=true)   
  
 # Details
  
