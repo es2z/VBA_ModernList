@@ -1,6 +1,4 @@
-The following uses machine translation.
-The translation may not be accurate.
-
+The following is a machine translation. Therefore, the translation may not be accurate.
 # VBA_ModernList
 It provides extremely fast and highly functional one-way associative lists that work primarily with ExcelVBA.  
 
