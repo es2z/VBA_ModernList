@@ -1,8 +1,7 @@
 # VBA_ModernList
-It provides extremely fast and highly functional one-way associative lists that work primarily with ExcelVBA.
+It provides extremely fast and highly functional one-way associative lists that work primarily with ExcelVBA.  
 
-It has the following features
-
+# Features  
 ･It can be used without adding reference settings.  
 ･It has methods required for lists, such as sorting, uniqueness, range extraction, etc., while in a list.  
 ･It is almost theoretically fast (more than one order of magnitude faster than Dictionary or ArrayList).  
@@ -11,13 +10,11 @@ It has the following features
 ･DebugPrint can be attached anywhere in the method chain to check the contents.  
 ･It includes a StringBuilder for fast string merging and a method to convert to CSV in a single line.  
 ･It is possible to calculate beyond the range of WokrSheetFunction (Sum,Average,Median,Max,Min,StDevP,Mode).  
-
-Translated with www.DeepL.com/Translator (free version)
-
  
-# ベンチマーク
-VBA_ModernListは内部実装において配列が使われており、純粋な配列に近い速度で動作します。
- ![](https://github.com/es2z/VBA_ModernList/blob/main/Img/BenchMark.png?raw=true) 
+# Bench Marks
+VBA_ModernList uses arrays in its internal implementation and operates at speeds similar to pure arrays.
+ ![](https://github.com/es2z/VBA_ModernList/blob/main/Img/BenchMark.png?raw=true)   
+ 
 # 基本操作
  
 以下のようにインスタンスを作成することで、使用可能になります。
