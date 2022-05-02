@@ -83,6 +83,7 @@ csv = List.ToBuildSCSV(5,vbTab,vbCr) 'Combine into a CSV format string of 5 line
 Arrayed 
 (you should be able to see it in a watch window in MethodTest, etc.)
 ```VBA
+* n is the number of stored elements -1
 str = List.ToArray ' Array(n)
 str = List.ToTransposeArray ' Array(0,n)  Useful for vertical pasting in Excel
 str = List.To2DArray(i) ' Array( n/i ,0 to i ) The number of columns can be specified.
