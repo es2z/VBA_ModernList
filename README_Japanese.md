@@ -1,4 +1,5 @@
 トップページはこちらから→ [こちら](https://github.com/es2z/VBA_ModernList/)   
+リリースはこちらから→  [こちら](https://github.com/es2z/VBA_ModernList/releases)
 
 # VBA_ModernList
 ExcelVBA(Windows)で動作する、極めて高速かつ高機能な一方向連接リストです。   
