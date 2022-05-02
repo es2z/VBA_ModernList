@@ -2,7 +2,7 @@
 The following is a machine translation. Therefore, the translation may not be accurate.  
 # VBA_ModernList
 This is an extremely fast and highly functional one-way concatenated list that runs in ExcelVBA (Windows).   
-*Versions that work in other environments will be added in the future. Probably.
+*Versions that work in other environments will be added in the future. Probably.  
 VBA_ModernList uses arrays in its internal implementation and operates at speeds similar to pure arrays.
  ![](/BenchMark.png?raw=true)   
 
