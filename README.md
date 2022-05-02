@@ -1,6 +1,5 @@
+日本語はこちらから→ [こちら](/README_Japanese.md)  
 The following is a machine translation. Therefore, the translation may not be accurate.  
-日本語はこちらから→ [こちら](/README_Japanese.md)   
-
 # VBA_ModernList
 This is an extremely fast and highly functional one-way concatenated list that runs in ExcelVBA (Windows).   
 *Versions that work in other environments will be added in the future. Probably.
