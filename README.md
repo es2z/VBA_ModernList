@@ -6,8 +6,8 @@ It provides extremely fast and highly functional one-way associative lists that 
 ･It has methods required for lists, such as sorting, uniqueness, range extraction, etc., while in a list.  
 ･It is almost theoretically fast (more than one order of magnitude faster than Dictionary or ArrayList).  
 ･It is possible to chain methods together and write everything from adding values to processing output in a single line (a feature known as LINQ in .Net).  
-･Extremely diverse arrayization is included for use with Excel sheets (two-dimensional arrayization, inverted two-dimensional arrayization, etc.).  
 ･DebugPrint can be attached anywhere in the method chain to check the contents.  
+･Extremely diverse arrayization is included for use with Excel sheets (two-dimensional arrayization, inverted two-dimensional arrayization, etc.).  
 ･It includes a StringBuilder for fast string merging and a method to convert to CSV in a single line.  
 ･It is possible to calculate beyond the range of WokrSheetFunction (Sum,Average,Median,Max,Min,StDevP,Mode).  
  
@@ -15,28 +15,28 @@ It provides extremely fast and highly functional one-way associative lists that 
 VBA_ModernList uses arrays in its internal implementation and operates at speeds similar to pure arrays.
  ![](https://github.com/es2z/VBA_ModernList/blob/main/Img/BenchMark.png?raw=true)   
  
-# 基本操作
+# Details
  
-以下のようにインスタンスを作成することで、使用可能になります。
+It can be used by creating an instance as follows.
 ```VBA
 Dim list as List:Set list = new List
 ```  
-※以下の内容はMethodTest.clsを追加して、内容を見たほうがわかりやすいかもしれません。
+*It may be easier to add MethodTest.cls to see the contents of the following.
 
-値の追加
+Adding Values
 ```VBA
 List.Add(1)
 call List.AddRange(Array(1,2,3,4,5))
 call List.AddRange(Range("A1:A100").Value)
-call List.Concat(List)) '別のリストの値を追加します
+call List.Concat(List)) 'Add another list values
 ```  
 
-値の取得
+Obtaining Values
 ```VBA
-val = List.GetValueOfIndexTest(0) ''0番目の値を取得
-arr = List.ToArray 'Arrayとしてすべての値を取得、通常For eachをする場合はこれを使います。
-set newList = List.Slice(5,10) '5番目から10番目の値をListとして取得
-set newList = List.PopRange(5,10) '5番目から10番目の値をListとして取得/その範囲を元のリストから削除
+val = List.GetValueOfIndexTest(0) 'Get the 0th element
+arr = List.ToArray 'Get all values as an Array, usually used when doing a For each.
+set newList = List.Slice(5,10) 'Get the 5th through 10th elements in a separate List
+set newList = List.PopRange(5,10) 'Get the 5th through 10th elements in a separate List./Delete values in the retrieved range
 ```  
 
 ソートなど
