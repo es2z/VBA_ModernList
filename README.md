@@ -1,4 +1,4 @@
-The following is a machine translation. Therefore, the translation may not be accurate.
+The following is a machine translation. Therefore, the translation may not be accurate.  
 日本語はこちらです→https://github.com/es2z/VBA_ModernList/blob/main/README_Japanese.md
 
 # VBA_ModernList
