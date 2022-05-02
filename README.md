@@ -1,5 +1,5 @@
 # VBA_ModernList
-主にExcelVBAで動作する、極めて高速かつ高機能な一方向連接リストを提供します。
+It provides extremely fast and highly functional one-way associative lists that work primarily with ExcelVBA.
 
 It has the following features
 
