@@ -80,6 +80,7 @@ csv = List.ToBuildSCSV(5,vbTab,vbCr) '5行改行,区切り文字タブ,改行文
 
 配列化(MethodTest内のウォッチウィンドウ等で見てくれたほうが良いです)
 ```VBA
+※nは格納要素数-1とします
 str = List.ToArray ' Array(n) 形式になります
 str = List.ToTransposeArray ' Array(0,n) 形式になります1列に貼付する際に便利
 str = List.To2DArray(i) ' Array( n/i ,0 to i ) 形式になります。列数が指定できる感じ。
