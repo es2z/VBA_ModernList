@@ -1,5 +1,5 @@
 The following is a machine translation. Therefore, the translation may not be accurate.  
-日本語はこちらです→ ![](https://github.com/es2z/VBA_ModernList/blob/main/README_Japanese.md)   
+日本語はこちらです→ ![こちら](https://github.com/es2z/VBA_ModernList/blob/main/README_Japanese.md)   
 
 # VBA_ModernList
 It provides extremely fast and highly functional one-way associative lists that work primarily with ExcelVBA.  
