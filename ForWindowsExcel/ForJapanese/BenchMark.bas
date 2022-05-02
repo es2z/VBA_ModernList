@@ -3,16 +3,16 @@ Private startTime As Date
 
 Sub BenchMark()
   
-   'Ú×‚ÍCtrl+G‚ÅƒCƒ~ƒfƒBƒGƒCƒgƒEƒBƒ“ƒhƒE‚ğ•\¦‚µ‚Ä‚­‚ê‚é‚Æ—Ç‚¢‚Æv‚¢‚Ü‚·B
+   'è©³ç´°ã¯Ctrl+Gã§è¡¨ç¤ºã•ã‚Œã‚‹ã‚¤ãƒŸãƒ‡ã‚£ã‚¨ã‚¤ãƒˆã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã§è¦‹ã¦ãã ã•ã„ã€‚
   
     Dim testCount&: testCount = 10000000
-    Call Benchmark_Collection(testCount / 200) 'Ši”[”‚ª‘‚¦‚é‚ÆGet‚ª€‚Ê‚Ù‚Ç’x‚¢‚Å‚·B O(n^2). —á‚¦‚Î A(10), B(1000) ‚¾‚ÆB‚ÍA‚Ì1–œ”{(100^2)d‚¢‚Å‚·B
-    Call Benchmark_Dictionary(testCount / 20) 'Collection‚Ù‚Ç‚Å‚È‚¢‚Å‚·‚ªAŠi”[”‚ª‘‚¦‚½ê‡Add‚ªŒƒ—ó‚Éd‚­‚È‚è‚Ü‚·B O(n^2)‚æ‚è‚à“‚¢‚©‚à
+    Call Benchmark_Collection(testCount / 200) 'æ ¼ç´æ•°ãŒå¢—ãˆã‚‹ã¨GetãŒæ­»ã¬ã»ã©é…ã„ã§ã™ã€‚ O(n^2). ä¾‹ãˆã° A(10), B(1000) ã ã¨Bã¯Aã®1ä¸‡å€(100^2)é‡ã„ã§ã™ã€‚
+    Call Benchmark_Dictionary(testCount / 20) 'Collectionã»ã©ã§ãªã„ã§ã™ãŒã€æ ¼ç´æ•°ãŒå¢—ãˆãŸå ´åˆAddãŒæ¿€çƒˆã«é‡ããªã‚Šã¾ã™ã€‚ O(n^2)ã‚ˆã‚Šã‚‚é…·ã„ã‹ã‚‚
     Call Benchmark_List(testCount)
     Call Benchmark_Array(testCount)
-    ''Call Benchmark_ArrayList(testCount) '.Net FrameWork 3.5Œn‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚È‚¢‚Æ“®‚«‚Ü‚¹‚ñB
+    ''Call Benchmark_ArrayList(testCount) '.Net FrameWork 3.5ç³»ãŒã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¦ãªã„ã¨å‹•ãã¾ã›ã‚“ã€‚
    
-'-------------Às—á(‡˜•ÏX‚µ‚Ä‚¢‚Ü‚·)---------------
+'-------------å®Ÿè¡Œä¾‹(é †åºå¤‰æ›´ã—ã¦ã„ã¾ã™)---------------
     'Specs
     'Windows 10 64bit pro 21H1
     'Intel i5 8265U @ 1.6~3.9Ghz 4C8T (All cores about 3.0Ghz)
@@ -25,7 +25,7 @@ Sub BenchMark()
             'List            :0.0313Sec (AddRange)
             'Array         :0.0156Sec
             'ArrayList  :3.9805Sec
-            'ArrayList  :0.0078Sec(AddRange)  ¦ArrayList“¯m‚µ‚©Œ‹‡‚Å‚«‚È‚¢‚İ‚½‚¢
+            'ArrayList  :0.0078Sec(AddRange)  â€»ArrayListåŒå£«ã—ã‹çµåˆã§ããªã„ã¿ãŸã„
 
         'Get 1M(1,000K)
             'Collection    :2530.500Sec (Derived from 100K)
@@ -39,7 +39,7 @@ Sub BenchMark()
             'List           :0.2969Sec(AddRange)
             'Array        :0.1406Sec
             'ArrayList :40.7891Sec
-            'ArrayList :0.0508Sec(AddRange) ¦ArrayList“¯m‚µ‚©Œ‹‡‚Å‚«‚È‚¢‚İ‚½‚¢
+            'ArrayList :0.0508Sec(AddRange) â€»ArrayListåŒå£«ã—ã‹çµåˆã§ããªã„ã¿ãŸã„
            
         'Get 10M(10,000K)
             'List            :0.2969Sec
@@ -151,7 +151,7 @@ Private Sub Benchmark_Array(testCount As Long)
    
 End Sub
 
-'.Net Framework 3.5(Œn?)‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚È‚¢ê‡“®‚©‚È‚¢‚Å‚·B
+'.Net Framework 3.5(ç³»?)ãŒã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¦ã„ãªã„å ´åˆå‹•ã‹ãªã„ã§ã™ã€‚
 Private Sub Benchmark_ArrayList(testCount As Long)
 
     Dim arrayList1 As Object: Set arrayList1 = CreateObject("System.Collections.ArrayList")
