@@ -1,3 +1,6 @@
+The following uses machine translation.
+The translation may not be accurate.
+
 # VBA_ModernList
 It provides extremely fast and highly functional one-way associative lists that work primarily with ExcelVBA.  
 
@@ -36,64 +39,64 @@ Obtaining Values
 val = List.GetValueOfIndexTest(0) 'Get the 0th element
 arr = List.ToArray 'Get all values as an Array, usually used when doing a For each.
 set newList = List.Slice(5,10) 'Get the 5th through 10th elements in a separate List
-set newList = List.PopRange(5,10) 'Get the 5th through 10th elements in a separate List./Delete values in the retrieved range
+set newList = List.PopRange(5,10) 'Get the 5th through 10th elements in a separate List and delete values.
 ```  
 
-ソートなど
+Sorting
 ```VBA
-call List.Sort '昇順ソート
-call List.SortByDescending '降順ソート
+call List.Sort 'Ascending 
+call List.SortByDescending 'Descending
 ```  
 
-
-ユニーク化(重複のない値にする)
+Uniqueness
 ```VBA
-set newList = List.DistinctToList 'もとのリストは保持される。
+set newList = List.DistinctToList 'The original list is retained.
 ```  
 
   
-デバッグ
+Debug
 ```VBA
-call List.DebugPrint("先頭の内容","Formatの形式 #,##0など ","後方の内容")
+call List.DebugPrint("Prefix","#,##0 etc.","suffix")
 ```  
 
-メソッドチェーン(殆どのメソッドは自身(List型)を返すので、そのまま次のメソッドを発行することが可能)
+Method chain
+(most methods return themselves (List type), so the next method can be issued without modification)
 ```VBA
 Call List.CreateSeqNumbers(0, 5) _
         .DebugPrint("Before MAP=> ") _
         .MAP("x", "x*PI()") _
         .DebugPrint("After Map=> ")
         
-        '0から5の連番を作成
-        '内容をイミディエイトに表示
-        'すべての内容にΠを掛ける
-        '内容を表示
+        'Create a sequential number from 0 to 5
+        'Display stored values
+        'multiply all stored values by Π
+        'Display stored values
 ```  
 
-文字列結合
+Character string association
 ```VBA
-str = List.ToBuildString '格納されている値をすべて結合します
-str = List.ToBuildString(",") '格納されている値をすべて結合します。要素の区切りとして","が追加されます)
-csv = List.ToBuildSCSV(5,vbTab,vbCr) '5行改行,区切り文字タブ,改行文字列CrのCSV形式の文字列に結合します。
+str = List.ToBuildString  'Combines all stored values
+str = List.ToBuildString(",") 'Combines all stored values (with "," used as element delimiter)
+csv = List.ToBuildSCSV(5,vbTab,vbCr) 'Combine into a CSV format string of 5 line feeds, delimiter tab, and line feed string Cr.
 ```  
 
-配列化(MethodTest内のウォッチウィンドウ等で見てくれたほうが良いです)
+Arrayed 
+(you should be able to see it in a watch window in MethodTest, etc.)
 ```VBA
-str = List.ToArray ' Array(n) 形式になります
-str = List.ToTransposeArray ' Array(0,n) 形式になります1列に貼付する際に便利
-str = List.To2DArray(i) ' Array( n/i ,0 to i ) 形式になります。列数が指定できる感じ。
-str = List.To2DTransposeArray(i) 'Array( 0 to i ,n/i) 形式になります。行数が指定できる感じ。
-str = List.ToChunkArray(i) ' Array((n/i)(0 to i))形式になります For eachで配列を分けたい場合に
-str = List.ToTransposeChunkArray' Array((n/i)(0,0 to i))形式になります For each+貼付で困った際に
-str = List.ToDivideArray(i) ' Array((0 to i)(i/n))形式になります予め何個の配列に分けたいか決まっている際に
+str = List.ToArray ' Array(n)
+str = List.ToTransposeArray ' Array(0,n)  Useful for vertical pasting in Excel
+str = List.To2DArray(i) ' Array( n/i ,0 to i ) The number of columns can be specified.
+str = List.To2DTransposeArray(i) 'Array( 0 to i ,n/i)  The number of Rows can be specified.
+str = List.ToChunkArray(i) ' Array((n/i)(0 to i))  Useful for use in For each
+str = List.ToTransposeChunkArray' Array((n/i)(0,0 to i) Useful for pasting into Excel with For each
+str = List.ToDivideArray(i) ' Array((0 to i)(i/n)) Useful when you know how many arrays you want to divide into.
 ```  
-
-集合
+Set theory
 ```VBA
-str = List.UnionToList '和集合を作ります
-str = List.ExceptToList '差集合を作ります
-str = List.IntersectToListTest '積集合を作ります
+str = List.UnionToList 
+str = List.ExceptToList
+str = List.IntersectToListTest 
 ```  
  
-# ライセンス
+# License
 [MIT license](https://en.wikipedia.org/wiki/MIT_License).
