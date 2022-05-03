@@ -17,6 +17,44 @@ VBA_ModernList uses arrays in its internal implementation and operates at speeds
 ･It includes a StringBuilder for fast string merging and a method to convert to CSV in a single line.  
 ･It is possible to calculate beyond the range of WokrSheetFunction (Sum,Average,Median,Max,Min,StDevP,Mode).  
  
+ # Demonstration  
+ ' This is a demonstration of how this can be done. If we are actually going to do this, shouldn't we assign every few to an explanatory variable?
+
+```VBA
+    Set List1 = New List
+    Set List2 = New List
+   
+    Dim CSV As String
+    CSV = List1.CreateEnumRange(1, 150) _
+        .IntersectToList(List2.CreateSeqNumbers(40, 200)) _
+        .SortByDescending _
+        .Slice(20, 100) _
+        .DebugPrint("Before conversions => ", "#,##0") _
+        .MAP("x", "floor(x*PI()*2,10)") _
+        .Filter("x", "Mod(x,20)=0") _
+        .DebugPrint("After conversions => ", "0.000", "!!!!!") _
+        .DistinctToList _
+        .ToBuildCSV(5, vbTab, vbCr)
+       Debug.Print CSV
+       
+    ' DebugPrint anywhere in the 'method chain' to see the contents!!
+   
+    'What we are doing.
+    'Adding consecutive values to List1 and 2
+    '*List1 is in (start number, number to be created) format, while List2 creates a sequential number in n = i to j (step k) format, where n is the sequential number to be created and the arguments are i,j,k.
+    'Create another list (say ListX) by creating the product set of List1 and 2 (leaving only the values that are in both)
+    'Sort ListX in descending order
+    'Slice ListX by range and return another list (say ListY)
+    'Enumerate all currently stored values separated by 3-digit commas
+    'Projection processing is performed on ListY (Evaluate is used, and the projected list is called ListZ) *In this case, pi is multiplied by 2 and rounded down to a multiple of 10.
+    'Filter ListZ and make another list (ListA), in this case only multiples of 20.
+    'Enumerate all currently stored values to 3 decimal places
+    'Delete duplicates from ListA (to be ListB)
+    'Create a string from ListB with tab as separator and Cr as newline code (comma and CrLf in the case of no argument, implementation is StringBuilder, so it's fast!)
+    ```
+
+ 
+ 
 # Details
  
 It can be used by creating an instance as follows.
