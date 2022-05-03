@@ -18,7 +18,8 @@ VBA_ModernList uses arrays in its internal implementation and operates at speeds
 ･It is possible to calculate beyond the range of WokrSheetFunction (Sum,Average,Median,Max,Min,StDevP,Mode).  
  
  # Demonstration  
- ' This is a demonstration of how this can be done. If we are actually going to do this, shouldn't we assign every few to an explanatory variable?
+ This is a demonstration of how this can be done. 
+ If we are actually going to do this, shouldn't we assign every few to an explanatory variable?
 
 ```VBA
     Set List1 = New List
