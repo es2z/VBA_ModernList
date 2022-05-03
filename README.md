@@ -35,9 +35,8 @@ VBA_ModernList uses arrays in its internal implementation and operates at speeds
         .DebugPrint("After conversions => ", "0.000", "!!!!!") _
         .DistinctToList _
         .ToBuildCSV(5, vbTab, vbCr)
-       Debug.Print CSV
-       
-    ' DebugPrint anywhere in the 'method chain' to see the contents!!
+        
+    Debug.Print CSV
    
     'What we are doing.
     'Adding consecutive values to List1 and 2
