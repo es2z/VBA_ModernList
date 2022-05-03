@@ -22,8 +22,8 @@ VBA_ModernList uses arrays in its internal implementation and operates at speeds
  If we are actually going to do this, shouldn't we assign every few to an explanatory variable?
 
 ```VBA
-    Set List1 = New List
-    Set List2 = New List
+    Dim List1 as List : Set List1 = New List
+    Dim List2 as List : Set List2 = New List
    
     Dim CSV As String
     CSV = List1.CreateEnumRange(1, 150) _
