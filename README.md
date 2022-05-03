@@ -42,21 +42,20 @@ VBA_ModernList uses arrays in its internal implementation and operates at speeds
     'What we are doing.
     'Adding consecutive values to List1 and 2
     '*List1 is in (start number, number to be created) format,
-       while List2 creates a sequential number in n = i to j (step k) format, where n is the sequential number to be created and the arguments are i,j,k.
+    '   while List2 creates a sequential number in n = i to j (step k) format, where n is the sequential number to be created and the arguments are i,j,k.
     'Create another list (say ListX) by creating the product set of List1 and 2 (leaving only the values that are in both)
     'Sort ListX in descending order
     'Slice ListX by range and return another list (say ListY)
     'Enumerate all currently stored values separated by 3-digit commas
     'Projection processing is performed on ListY (Evaluate is used, and the projected list is called ListZ) 
-       *In this case, pi is multiplied by 2 and rounded down to a multiple of 10.
+    '  *In this case, pi is multiplied by 2 and rounded down to a multiple of 10.
     'Filter ListZ and make another list (ListA), in this case only multiples of 20.
     'Enumerate all currently stored values to 3 decimal places
     'Delete duplicates from ListA (to be ListB)
     'Create a string from ListB with tab as separator and Cr as newline code 
-      *comma and CrLf in the case of no argument, implementation is StringBuilder, so it's fast!
+    '   *comma and CrLf in the case of no argument, implementation is StringBuilder, so it's fast!
 ```  
 
- 
  
 # Details
  
