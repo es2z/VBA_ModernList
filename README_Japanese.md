@@ -37,7 +37,7 @@ call List.Concat(List)) '別のリストの値を追加します
 
 値の取得
 ```VBA
-val = List.GetValueOfIndexTest(0) ''0番目の値を取得
+val = List.GetValueOfIndex(0) ''0番目の値を取得
 arr = List.ToArray 'Arrayとしてすべての値を取得、通常For eachをする場合はこれを使います。
 set newList = List.Slice(5,10) '5番目から10番目の値をListとして取得
 set newList = List.PopRange(5,10) '5番目から10番目の値をListとして取得/その範囲を元のリストから削除
@@ -97,7 +97,7 @@ str = List.ToDivideArray(i) ' Array((0 to i)(i/n))形式になります予め何
 ```VBA
 str = List.UnionToList '和集合を作ります
 str = List.ExceptToList '差集合を作ります
-str = List.IntersectToListTest '積集合を作ります
+str = List.IntersectToList '積集合を作ります
 ```  
  
 # ライセンス
