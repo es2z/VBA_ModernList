@@ -19,6 +19,44 @@ VBA_ModernListは内部実装において配列が使われており、純粋な
 ･StringBuilderを内包しており、高速な文字列結合が行え、CSV化を1行でかけるメソッドもあります。  
 ･極めて大きな範囲の数値計算を行うことも可能です(Sum,Average,Median,Max,Min,StDevP,Mode)  
 
+# デモンストレーション
+もしも望むならこういうことまでできるというデモです。
+実際にやるならいくつかごとに説明変数に代入するべきだと思います。
+```VBA
+
+    Dim List1 as List:Set List1 = New List
+    Dim List2 as List:Set List2 = New List
+   
+    Dim CSV As String
+    CSV = List1.CreateEnumRange(1, 150) _
+        .IntersectToList(List2.CreateSeqNumbers(40, 200)) _
+        .SortByDescending _
+        .Slice(20, 100) _
+        .DebugPrint("変換前 => ","#,##0") _
+        .MAP("x", "floor(x*PI()*2,10)") _
+        .Filter("x", "Mod(x,20)=0") _
+        .DebugPrint("変換後 => ","0.000","になりましたよー") _
+        .DistinctToList _
+        .ToBuildCSV(5, vbTab, vbCr)
+
+       Debug.Print CSV
+   
+    'やってること
+    'List1と2に連続する値を追加
+    '※List1は(開始数,作られる数)形式
+    '  List2は作成される連番をn、引数をi,j,kとすると n = i to j (step k)形式で連番を作成
+    'List1と2の積集合(両方にある値のみ残す)を作成して別のリストを作成(ListXとする)
+    'ListXを降順ソート
+    'ListXを範囲指定でスライスして別のリストを返す(ListYとする)
+    '現在格納されているすべての値を3桁カンマ区切りで列挙
+    'ListYに射影処理を行う(Evaluateを使用,射影後のリストをListZとする) ※この場合πと2を掛けて10の倍数に切り下げている
+    'ListZにフィルター処理を行い別のリスト(ListA)この場合20の倍数のみにする 実装はMAPとほぼ同じ
+    '現在格納されているすべての値を小数点以下3桁まで列挙
+    'ListAの重複を削除(ListBとする)
+    'ListBからセパレータがtabで改行コードがCrな文字列を作成(引数なしの場合カンマとCrLf、実装はStringBuilderなのではやい!)
+    '結果を表示
+```
+
 # 基本操作
  
 以下のようにインスタンスを作成することで、使用可能になります。
