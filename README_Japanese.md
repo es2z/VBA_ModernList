@@ -39,7 +39,7 @@ VBA_ModernListは内部実装において配列が使われており、純粋な
         .DistinctToList _
         .ToBuildCSV(5, vbTab, vbCr)
 
-       Debug.Print CSV
+    Debug.Print CSV
    
     'やってること
     'List1と2に連続する値を追加
