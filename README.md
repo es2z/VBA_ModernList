@@ -51,7 +51,7 @@ VBA_ModernList uses arrays in its internal implementation and operates at speeds
     'Enumerate all currently stored values to 3 decimal places
     'Delete duplicates from ListA (to be ListB)
     'Create a string from ListB with tab as separator and Cr as newline code (comma and CrLf in the case of no argument, implementation is StringBuilder, so it's fast!)
-    ```
+```  
 
  
  
