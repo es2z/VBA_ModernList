@@ -35,7 +35,7 @@ call List.Concat(List)) 'Add another list values
 
 Obtaining Values
 ```VBA
-val = List.GetValueOfIndexTest(0) 'Get the 0th element
+val = List.GetValueOfIndex(0) 'Get the 0th element
 arr = List.ToArray 'Get all values as an Array, usually used when doing a For each.
 set newList = List.Slice(5,10) 'Get the 5th through 10th elements in a separate List
 set newList = List.PopRange(5,10) 'Get the 5th through 10th elements in a separate List and delete values.
@@ -95,7 +95,7 @@ Set theory
 ```VBA
 str = List.UnionToList 
 str = List.ExceptToList
-str = List.IntersectToListTest 
+str = List.IntersectToList 
 ```  
  
 # License
